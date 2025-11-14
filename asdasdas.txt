@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head></head>
+
+<body class="__variable_cla642 __variable_be5b54 antialiased grain">
+  <main class="relative">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border"></nav>
+
+    <div class="pt-16">
+      <section class="relative min-h-screen flex items-center justify-center overflow-hidden"></section>
+
+      <section class="relative py-32 overflow-hidden">
+        <div class="absolute inset-0 z-10" style="transform: translateY(8.33775%);"></div>
+
+        <div class="container px-4">
+          <div class="text-center mb-16" style="opacity: 1; transform: none;"></div>
+
+          <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            
+            <div class="group relative" style="opacity: 0; transform: translateY(40px);"></div>
+            <div class="group relative" style="opacity: 0; transform: translateY(40px);"></div>
+
+            <div class="group relative">
+              <div class="relative p-8 rounded-2xl bg-card border border-border overflow-hidden transition-all duration-500 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+
+                <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500"
+                  style="background: linear-gradient(135deg, #06b6d4, #0ea5e9);"></div>
+
+                <div class="absolute inset-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500"></div>
+
+                <div class="relative z-10">
+
+                  <div class="mb-6 inline-flex p-4 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300"></div>
+
+                  <h3 class="text-2xl font-display font-bold mb-3 group-hover:text-primary transition-colors duration-300">
+                    Financeiro & Cobrança
+                  </h3>
+
+                  <p class="text-muted-foreground mb-6 leading-relaxed">
+                    Envio de boletos, Lembretes, Atualização de recebimentos
+                  </p>
+
+                  <button class="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all duration-300"></button>
+
+                </div>
+
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+            </div>
+
+            <div class="group relative" style="opacity: 0; transform: translateY(40px);"></div>
+            <div class="group relative" style="opacity: 0; transform: translateY(40px);"></div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="relative py-32 overflow-hidden"></section>
+      <section class="relative py-32 overflow-hidden"></section>
+      <section class="relative py-32 overflow-hidden"></section>
+      <section class="relative py-32 overflow-hidden"></section>
+      <section class="relative py-32 overflow-hidden"></section>
+      <section class="relative py-32"></section>
+      <section class="relative py-32 overflow-hidden"></section>
+
+    </div>
+
+  </main>
+
+  <script src="/_next/static/chunks/webpack.js?v=1763129349598" async></script>
+  <script>(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])</script>
+  <script></script>
+  <script></script>
+  <script></script>
+  <script></script>
+  <script></script>
+
+  <next-route-announcer style="position: absolute;"></next-route-announcer>
+</body>
+</html>
