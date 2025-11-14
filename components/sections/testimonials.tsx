@@ -5,12 +5,14 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "A sensação é de ter contratado um novo funcionário, só que ele trabalha 24h por dia e não esquece nada.",
+    quote:
+      "A sensação é de ter contratado um novo funcionário, só que ele trabalha 24h por dia e não esquece nada.",
     author: "Diretor Comercial",
     gradient: "from-amber-500 to-orange-600",
   },
   {
-    quote: "A gente deixou de apagar incêndio e passou a acompanhar os números em tempo real. O agente faz o trabalho chato e repetitivo.",
+    quote:
+      "A gente deixou de apagar incêndio e passou a acompanhar os números em tempo real. O agente faz o trabalho chato e repetitivo.",
     author: "Gestor Operacional",
     gradient: "from-cyan-500 to-blue-600",
   },
@@ -45,13 +47,17 @@ export function Testimonials() {
               className="group relative p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300"
             >
               {/* Quote icon */}
-              <div className={`absolute top-4 right-4 w-16 h-16 rounded-full bg-gradient-to-br ${testimonial.gradient} opacity-10 group-hover:opacity-20 transition-opacity flex items-center justify-center`}>
+              <div
+                className={`absolute top-4 right-4 w-16 h-16 rounded-full bg-gradient-to-br ${testimonial.gradient} opacity-10 group-hover:opacity-20 transition-opacity flex items-center justify-center`}
+              >
                 <Quote className="w-8 h-8 text-primary" />
               </div>
 
               <div className="relative z-10">
                 <p className="text-lg md:text-xl leading-relaxed mb-6 italic">
-                  "{testimonial.quote}"
+                  <span aria-hidden="true">&ldquo;</span>
+                  {testimonial.quote}
+                  <span aria-hidden="true">&rdquo;</span>
                 </p>
                 <div className="flex items-center gap-3">
                   <div className={`w-1 h-12 rounded-full bg-gradient-to-b ${testimonial.gradient}`} />
