@@ -40,14 +40,14 @@ export function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-5xl mx-auto text-center space-y-8"
+          className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8"
         >
           {/* Badge */}
           <motion.div variants={itemVariants} className="flex justify-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm">
               <Sparkles className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">
-                Seu hub de especialistas em agentes de IA
+                IA acessível, feita por especialistas do seu mercado
               </span>
             </div>
           </motion.div>
@@ -55,24 +55,21 @@ export function Hero() {
           {/* Main headline */}
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight leading-tight md:leading-tight"
           >
-            <span className="block mb-2">IA trabalhando</span>
-            <span className="block text-gradient-multi">
-              com você para
-            </span>
-            <span className="block mt-2">você ser mais</span>
+            <span className="block mb-1 md:mb-2">Agentes de IA sob medida</span>
+            <span className="block text-gradient-multi">criados por especialistas</span>
+            <span className="block mt-1 md:mt-2">do seu mercado</span>
           </motion.h1>
 
           {/* Subtitle */}
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+            className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed md:leading-relaxed"
           >
-            Pare de só ouvir falar sobre IA. A ProceX cria{" "}
-            <span className="text-primary font-semibold">agentes que assumem tarefas repetitivas</span>{" "}
-            na sua rotina — de vendas ao financeiro — para você ter mais impacto na empresa{" "}
-            <span className="text-secondary font-semibold">sem precisar virar especialista em tecnologia</span>.
+            Você descreve sua rotina e seus objetivos em linguagem de negócio. A ProceX conecta você a{" "}
+            <span className="text-primary font-semibold">especialistas em IA de cada segmento</span> para desenhar agentes que{" "}
+            <span className="text-secondary font-semibold">trabalham com você no dia a dia</span> — assumindo tarefas, melhorando processos e abrindo novas oportunidades.
           </motion.p>
 
           {/* Target audience */}
@@ -80,7 +77,7 @@ export function Hero() {
             variants={itemVariants}
             className="text-base md:text-lg text-muted-foreground/80"
           >
-            Serve para donos, gestores, analistas, vendedores, CS — qualquer pessoa que quer fazer mais com o que já tem.
+            Para donos, gestores, analistas, vendedores, CS… qualquer pessoa que quer fazer mais com o que já tem.
           </motion.p>
 
           {/* CTA buttons */}
@@ -90,7 +87,7 @@ export function Hero() {
           >
             <button className="group relative px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/50">
               <span className="relative z-10 flex items-center gap-2">
-                Quero ver, na prática, como IA pode me ajudar
+                Quero um assistente de IA trabalhando comigo
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -101,32 +98,8 @@ export function Hero() {
             </button>
           </motion.div>
 
-          {/* Value prop badge */}
-          <motion.div
-            variants={itemVariants}
-            className="pt-8 flex justify-center"
-          >
-            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border-gradient backdrop-blur-sm">
-              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-sm font-medium">
-                🎯 Você descreve o problema em linguagem de negócio. A ProceX entrega o agente pronto e acompanha os resultados.
-              </span>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <div className="w-6 h-10 rounded-full border-2 border-primary/30 flex items-start justify-center p-2">
-          <div className="w-1 h-2 rounded-full bg-primary animate-bounce" />
-        </div>
-      </motion.div>
     </section>
   );
 }

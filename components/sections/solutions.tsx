@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useRouter } from "next/navigation";
 import { MessageSquare, DollarSign, Settings, TrendingUp, ArrowRight } from "lucide-react";
 
 const solutions = [
@@ -9,6 +10,7 @@ const solutions = [
     icon: MessageSquare,
     title: "Atendimento & Suporte",
     description: "Respostas rápidas, Filtragem de demandas, Agendamentos",
+    href: "/atendimento-suporte",
     color: "primary",
     gradient: "linear-gradient(135deg, #fbbf24, #dc2626)",
   },
@@ -16,6 +18,7 @@ const solutions = [
     icon: DollarSign,
     title: "Financeiro & Cobrança",
     description: "Envio de boletos, Lembretes, Atualização de recebimentos",
+    href: "/financeiro-cobranca",
     color: "secondary",
     gradient: "linear-gradient(135deg, #06b6d4, #0ea5e9)",
   },
@@ -23,6 +26,7 @@ const solutions = [
     icon: Settings,
     title: "Operações & Backoffice",
     description: "Status de pedidos, Relatórios, Organização de tarefas",
+    href: "/operacoes-backoffice",
     color: "accent",
     gradient: "linear-gradient(135deg, #f43f5e, #ec4899)",
   },
@@ -30,6 +34,7 @@ const solutions = [
     icon: TrendingUp,
     title: "Vendas & Comercial",
     description: "Nutrição de leads, Reativação de clientes, Atualizações em CRM",
+    href: "/vendas-comercial",
     color: "primary",
     gradient: "linear-gradient(135deg, #8b5cf6, #a855f7)",
   },
@@ -37,10 +42,15 @@ const solutions = [
 
 function SolutionCard({ solution }: { solution: typeof solutions[0] }) {
   const Icon = solution.icon;
+  const router = useRouter();
+
+  const handleExplore = () => {
+    router.push(solution.href);
+  };
 
   return (
     <div className="group relative">
-      <div className="relative p-8 rounded-2xl bg-card border border-border overflow-hidden transition-all duration-500 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
+      <div className="relative p-8 rounded-2xl bg-card border border-border overflow-hidden transition-all duration-500 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 cursor-pointer" onClick={handleExplore}>
         {/* Gradient overlay on hover */}
         <div
           className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500"
@@ -65,7 +75,13 @@ function SolutionCard({ solution }: { solution: typeof solutions[0] }) {
           </p>
 
           {/* CTA */}
-          <button className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all duration-300">
+          <button 
+            onClick={(e) => {
+              e.stopPropagation();
+              handleExplore();
+            }}
+            className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all duration-300 hover:underline"
+          >
             Explorar solução
             <ArrowRight className="w-4 h-4" />
           </button>
