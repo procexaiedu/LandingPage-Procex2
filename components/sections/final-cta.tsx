@@ -125,13 +125,17 @@ export function FinalCTA() {
               </p>
             </div>
 
-            {/* Navigation */}
+            {/* Navegação */}
             <div>
               <h4 className="font-semibold mb-3">Navegação</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition-colors">Como funciona</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Casos reais</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Planos</a></li>
+                <li><a href="/#processo" className="hover:text-primary transition-colors">Como funciona</a></li>
+                <li><a href="/#casos" className="hover:text-primary transition-colors">Casos reais</a></li>
+                <li><a href="/#planos" className="hover:text-primary transition-colors">Planos</a></li>
+                <li><a href="/atendimento-suporte" className="hover:text-primary transition-colors">Atendimento &amp; Suporte</a></li>
+                <li><a href="/financeiro-cobranca" className="hover:text-primary transition-colors">Financeiro &amp; Cobrança</a></li>
+                <li><a href="/operacoes-backoffice" className="hover:text-primary transition-colors">Operações &amp; Backoffice</a></li>
+                <li><a href="/vendas-comercial" className="hover:text-primary transition-colors">Vendas &amp; Comercial</a></li>
               </ul>
             </div>
 
@@ -139,24 +143,37 @@ export function FinalCTA() {
             <div>
               <h4 className="font-semibold mb-3">Legal</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition-colors">Política de Privacidade</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Termos de Uso</a></li>
+                <li><a href="/privacidade" className="hover:text-primary transition-colors">Política de Privacidade</a></li>
+                <li><a href="/termos" className="hover:text-primary transition-colors">Termos de Uso</a></li>
               </ul>
             </div>
 
-            {/* Contact */}
+            {/* Contato */}
             <div>
               <h4 className="font-semibold mb-3">Contato</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="mailto:contato@procex.ai" className="hover:text-primary transition-colors">contato@procex.ai</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">WhatsApp</a></li>
+                <li>
+                  <a href="mailto:contato@procexai.tech" className="hover:text-primary transition-colors">
+                    contato@procexai.tech
+                  </a>
+                </li>
+                <li className="pt-3 not-italic leading-relaxed">
+                  Av. Rotary, 25<br />
+                  Vila Brandina<br />
+                  Campinas/SP — 13.092-509
+                </li>
               </ul>
             </div>
           </div>
 
-          {/* Copyright */}
-          <div className="text-center text-sm text-muted-foreground pt-8 border-t border-border">
-            <p>© 2025 ProceX. Todos os direitos reservados.</p>
+          {/* Copyright + dados legais */}
+          <div className="pt-8 border-t border-border text-center text-xs text-muted-foreground space-y-1">
+            <p>
+              ProceX AI — Lucas Vinicius Farjallat — CNPJ 60.330.684/0001-11
+            </p>
+            <p>
+              © {new Date().getFullYear()} ProceX. Todos os direitos reservados.
+            </p>
           </div>
         </motion.div>
       </div>
