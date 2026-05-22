@@ -72,17 +72,23 @@ export function OperationsHero() {
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6"
           >
-            <button className="group relative px-8 py-4 bg-accent text-accent-foreground rounded-lg font-semibold text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-xl hover:shadow-accent/50">
+            <a
+              href="/diagnostico-gratuito?source=operacoes_hero_primary"
+              className="group relative px-8 py-4 bg-accent text-accent-foreground rounded-lg font-semibold text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-xl hover:shadow-accent/50 inline-block"
+            >
               <span className="relative z-10 flex items-center gap-2">
                 Quero organizar minhas operações com IA
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-rose-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </button>
+            </a>
 
-            <button className="px-8 py-4 border-2 border-accent text-accent rounded-lg font-semibold text-lg hover:bg-accent hover:text-accent-foreground transition-all hover:scale-105 hover:shadow-lg hover:shadow-accent/30">
+            <a
+              href="/diagnostico-gratuito?source=operacoes_hero_secondary"
+              className="px-8 py-4 border-2 border-accent text-accent rounded-lg font-semibold text-lg hover:bg-accent hover:text-accent-foreground transition-all hover:scale-105 hover:shadow-lg hover:shadow-accent/30 inline-block"
+            >
               Falar com um especialista em operações
-            </button>
+            </a>
           </motion.div>
         </motion.div>
       </div>

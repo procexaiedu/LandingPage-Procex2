@@ -82,9 +82,12 @@ export function FAQ() {
 
           <div className="text-center mt-12">
             <p className="text-muted-foreground mb-4">Minha dúvida não está aqui</p>
-            <button className="text-primary font-semibold hover:underline underline-offset-4 transition-all">
-              Falar pelo WhatsApp
-            </button>
+            <a
+              href="/diagnostico-gratuito?source=home_faq"
+              className="text-primary font-semibold hover:underline underline-offset-4 transition-all inline-block"
+            >
+              Falar com um especialista
+            </a>
           </div>
         </motion.div>
       </div>

@@ -98,24 +98,59 @@ export default function PrivacidadePage() {
           <section>
             <h2 className="text-2xl font-display font-bold mb-3">5. Com quem compartilhamos</h2>
             <p>
-              Não vendemos seus dados. Compartilhamos apenas com operadores estritamente
-              necessários para a operação do nosso serviço:
+              Não vendemos seus dados. Nossos bancos de dados rodam em infraestrutura própria
+              auto-hospedada da ProceX — seus dados pessoais não saem do nosso controle direto.
+              Compartilhamos apenas com os operadores abaixo, estritamente necessários para a
+              operação do serviço:
             </p>
             <ul className="list-disc list-inside space-y-2 ml-2 mt-2">
-              <li><strong>Vercel Inc.</strong> — hospedagem do site e métricas básicas (Web Vitals,
-                page views). Dados podem trafegar fora do Brasil.</li>
-              <li><strong>Supabase</strong> — banco de dados onde armazenamos os leads. Operação
-                em infraestrutura própria da ProceX.</li>
-              <li><strong>PostHog</strong> — analytics de eventos e session replay, em ambiente
-                privacy-friendly e configurado para mascarar dados sensíveis.</li>
-              <li><strong>Meta Platforms (WhatsApp Business)</strong> e <strong>yCloud (BSP)</strong>
-                — provedores quando você opta por receber contato via WhatsApp.</li>
-              <li><strong>Autoridades públicas</strong>, mediante ordem judicial ou exigência
-                legal.</li>
+              <li>
+                <strong>Vercel Inc.</strong> (EUA) — hospedagem do site e execução das funções
+                serverless que processam requisições. Dados podem trafegar fora do Brasil.
+                Política:{" "}
+                <a
+                  href="https://vercel.com/legal/privacy-policy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  vercel.com/legal/privacy-policy
+                </a>
+              </li>
+              <li>
+                <strong>PostHog Inc.</strong> (EUA/UE) — analytics de eventos e gravação de
+                sessões em ambiente privacy-friendly, com mascaramento de dados sensíveis em
+                inputs. Política:{" "}
+                <a
+                  href="https://posthog.com/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  posthog.com/privacy
+                </a>
+              </li>
+              <li>
+                <strong>Meta Platforms Inc.</strong> (WhatsApp Business) e <strong>yCloud</strong>{" "}
+                (BSP) — apenas quando você opta por receber contato via WhatsApp. Política
+                Meta:{" "}
+                <a
+                  href="https://www.facebook.com/privacy/policy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  facebook.com/privacy/policy
+                </a>
+              </li>
+              <li>
+                <strong>Autoridades públicas</strong>, mediante ordem judicial ou exigência
+                legal.
+              </li>
             </ul>
             <p className="mt-3">
-              Todos os parceiros possuem políticas próprias de privacidade e contratos de
-              proteção de dados com a ProceX, sempre que aplicável.
+              Todos os parceiros possuem políticas próprias de privacidade e estão sujeitos
+              às respectivas legislações de proteção de dados aplicáveis.
             </p>
           </section>
 

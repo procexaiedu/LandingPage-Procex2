@@ -148,9 +148,12 @@ export function ProcessFlow() {
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Basta saber qual rotina precisa melhorar. Você descreve em linguagem de negócio, nós traduzimos isso em agentes de IA que executam com consistência.
           </p>
-          <button className="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-lg font-semibold text-lg hover:scale-105 transition-transform hover:shadow-xl hover:shadow-primary/50">
+          <a
+            href="/diagnostico-gratuito?source=home_process_flow"
+            className="inline-block px-8 py-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-lg font-semibold text-lg hover:scale-105 transition-transform hover:shadow-xl hover:shadow-primary/50"
+          >
             Mapear meu primeiro fluxo de IA
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

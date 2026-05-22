@@ -77,9 +77,12 @@ export function Testimonials() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <button className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold text-lg hover:scale-105 transition-transform hover:shadow-xl hover:shadow-primary/50">
+          <a
+            href="/diagnostico-gratuito?source=home_testimonials"
+            className="inline-block px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold text-lg hover:scale-105 transition-transform hover:shadow-xl hover:shadow-primary/50"
+          >
             Entrar em contato
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

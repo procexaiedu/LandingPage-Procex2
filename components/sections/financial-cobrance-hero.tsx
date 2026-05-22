@@ -72,17 +72,23 @@ export function FinancialCobbranceHero() {
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6"
           >
-            <button className="group relative px-8 py-4 bg-secondary text-secondary-foreground rounded-lg font-semibold text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-xl hover:shadow-secondary/50">
+            <a
+              href="/diagnostico-gratuito?source=financeiro_hero_primary"
+              className="group relative px-8 py-4 bg-secondary text-secondary-foreground rounded-lg font-semibold text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-xl hover:shadow-secondary/50 inline-block"
+            >
               <span className="relative z-10 flex items-center gap-2">
                 Quero organizar minha cobrança com IA
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </button>
+            </a>
 
-            <button className="px-8 py-4 border-2 border-secondary text-secondary rounded-lg font-semibold text-lg hover:bg-secondary hover:text-secondary-foreground transition-all hover:scale-105 hover:shadow-lg hover:shadow-secondary/30">
+            <a
+              href="/diagnostico-gratuito?source=financeiro_hero_secondary"
+              className="px-8 py-4 border-2 border-secondary text-secondary rounded-lg font-semibold text-lg hover:bg-secondary hover:text-secondary-foreground transition-all hover:scale-105 hover:shadow-lg hover:shadow-secondary/30 inline-block"
+            >
               Falar com um especialista financeiro
-            </button>
+            </a>
           </motion.div>
         </motion.div>
       </div>

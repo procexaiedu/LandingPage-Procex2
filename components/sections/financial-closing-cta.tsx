@@ -30,7 +30,8 @@ export function FinancialClosingCTA() {
           </p>
 
           {/* CTA button */}
-          <motion.button
+          <motion.a
+            href="/diagnostico-gratuito?source=financeiro_closing"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             className="group relative px-8 py-4 bg-secondary text-secondary-foreground rounded-lg font-semibold text-lg overflow-hidden transition-all hover:shadow-xl hover:shadow-secondary/50 inline-flex items-center gap-2"
@@ -40,7 +41,7 @@ export function FinancialClosingCTA() {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
     </section>

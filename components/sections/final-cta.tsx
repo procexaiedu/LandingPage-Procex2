@@ -81,16 +81,22 @@ export function FinalCTA() {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="group px-10 py-5 bg-gradient-to-r from-primary via-secondary to-primary bg-size-200 bg-pos-0 hover:bg-pos-100 text-primary-foreground rounded-xl font-bold text-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/50">
+            <a
+              href="/diagnostico-gratuito?source=home_final_cta_primary"
+              className="group inline-block px-10 py-5 bg-gradient-to-r from-primary via-secondary to-primary bg-size-200 bg-pos-0 hover:bg-pos-100 text-primary-foreground rounded-xl font-bold text-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/50"
+            >
               <span className="flex items-center gap-3">
                 Falar com especialista em IA
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
               </span>
-            </button>
+            </a>
 
-            <button className="px-10 py-5 border-2 border-secondary text-secondary rounded-xl font-bold text-xl hover:bg-secondary hover:text-secondary-foreground transition-all hover:scale-105">
+            <a
+              href="/#solucoes"
+              className="inline-block px-10 py-5 border-2 border-secondary text-secondary rounded-xl font-bold text-xl hover:bg-secondary hover:text-secondary-foreground transition-all hover:scale-105"
+            >
               Ver soluções para minha área
-            </button>
+            </a>
           </div>
 
           {/* Priority badge */}

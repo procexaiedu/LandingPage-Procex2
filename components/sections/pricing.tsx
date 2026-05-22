@@ -15,6 +15,7 @@ const plans = [
       "Implementação",
     ],
     cta: "Solicitar Diagnóstico",
+    source: "home_pricing_diagnostico",
     badge: null,
     gradient: "from-muted to-card",
   },
@@ -29,6 +30,7 @@ const plans = [
       "Múltiplos agentes",
     ],
     cta: "Começar Piloto",
+    source: "home_pricing_piloto",
     badge: "⭐ Mais Popular",
     gradient: "from-primary/20 to-secondary/20",
     highlight: true,
@@ -44,6 +46,7 @@ const plans = [
       "Otimizações contínuas",
     ],
     cta: "Escalar Operações",
+    source: "home_pricing_evolucao",
     badge: null,
     gradient: "from-accent/20 to-primary/20",
   },
@@ -130,9 +133,12 @@ export function Pricing() {
                   </ul>
 
                   {/* CTA */}
-                  <button className={`w-full py-3 rounded-lg font-semibold transition-all hover:scale-105 ${plan.highlight ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-lg shadow-primary/30' : 'border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground'}`}>
+                  <a
+                    href={`/diagnostico-gratuito?source=${plan.source}`}
+                    className={`block w-full py-3 rounded-lg font-semibold transition-all hover:scale-105 text-center ${plan.highlight ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-lg shadow-primary/30' : 'border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground'}`}
+                  >
                     {plan.cta}
-                  </button>
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -160,9 +166,12 @@ export function Pricing() {
           </div>
 
           <div className="text-center">
-            <button className="px-8 py-4 bg-card border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all hover:scale-105">
+            <a
+              href="/diagnostico-gratuito?source=home_pricing_highlights"
+              className="inline-block px-8 py-4 bg-card border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all hover:scale-105"
+            >
               Conversar sobre o melhor modelo
-            </button>
+            </a>
             <p className="text-sm text-muted-foreground mt-4">
               Fique entre os primeiros a receber os modelos de entrada e condições especiais
             </p>

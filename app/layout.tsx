@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Syne, Instrument_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { SmoothScrollProvider } from "@/components/smooth-scroll-provider";
+import { AnalyticsProvider } from "@/components/analytics-provider";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -38,9 +40,12 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="dark">
       <body className={`${syne.variable} ${instrumentSans.variable} antialiased grain`}>
-        <SmoothScrollProvider>
-          {children}
-        </SmoothScrollProvider>
+        <AnalyticsProvider>
+          <SmoothScrollProvider>
+            {children}
+          </SmoothScrollProvider>
+        </AnalyticsProvider>
+        <Analytics />
       </body>
     </html>
   );

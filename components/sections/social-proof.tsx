@@ -156,9 +156,12 @@ export function SocialProof() {
           </div>
 
           <div className="text-center">
-            <button className="text-primary font-semibold hover:underline underline-offset-4 transition-all">
+            <a
+              href="#solucoes"
+              className="text-primary font-semibold hover:underline underline-offset-4 transition-all inline-block"
+            >
               Ver casos reais por área
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>

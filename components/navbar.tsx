@@ -39,9 +39,12 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <button className="px-6 py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:scale-105 transition-transform">
+            <a
+              href="/diagnostico-gratuito?source=navbar"
+              className="px-6 py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:scale-105 transition-transform inline-block"
+            >
               Falar com especialista
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -71,9 +74,13 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <button className="w-full px-6 py-2 bg-primary text-primary-foreground rounded-lg font-semibold">
+            <a
+              href="/diagnostico-gratuito?source=navbar_mobile"
+              className="block w-full px-6 py-2 bg-primary text-primary-foreground rounded-lg font-semibold text-center"
+              onClick={() => setIsOpen(false)}
+            >
               Falar com especialista
-            </button>
+            </a>
           </motion.div>
         )}
       </div>
