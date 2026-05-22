@@ -54,6 +54,12 @@ const values = <T extends ReadonlyArray<{ value: string }>>(arr: T) =>
 
 // ---- Schema zod compartilhado client + server ----
 
+// errorMap default usado nos enums abaixo (mensagem amigavel em PT-BR
+// quando o valor recebido nao bate com nenhuma opcao do enum).
+const requiredEnumError = (label: string) => ({
+  errorMap: () => ({ message: `Selecione uma opção em "${label}"` }),
+});
+
 export const leadSchema = z.object({
   // Identificacao
   full_name: z
@@ -74,9 +80,15 @@ export const leadSchema = z.object({
     .min(2, "Informe o nome da empresa")
     .max(120, "Nome muito longo"),
   company_url: z.string().trim().max(255).optional().or(z.literal("")),
-  industry: z.enum(values(industryOptions)),
-  employee_range: z.enum(values(employeeRangeOptions)),
-  revenue_range: z.enum(values(revenueRangeOptions)),
+  industry: z.enum(values(industryOptions), requiredEnumError("Setor/Nicho")),
+  employee_range: z.enum(
+    values(employeeRangeOptions),
+    requiredEnumError("Funcionários"),
+  ),
+  revenue_range: z.enum(
+    values(revenueRangeOptions),
+    requiredEnumError("Faturamento mensal"),
+  ),
 
   // Dor
   automation_areas: z
@@ -89,7 +101,10 @@ export const leadSchema = z.object({
     .max(2000, "Máximo 2000 caracteres"),
 
   // Compromisso
-  implementation_timeline: z.enum(values(implementationTimelineOptions)),
+  implementation_timeline: z.enum(
+    values(implementationTimelineOptions),
+    requiredEnumError("Horizonte de implementação"),
+  ),
 
   // Origem (preenchido client-side via URL/cookie)
   source_page: z.string().max(120).optional().or(z.literal("")),
